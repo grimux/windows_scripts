@@ -15,6 +15,20 @@ Return
 	WinActivate
 Return
 
+; Notepad++
+#+n::
+	Run, notepad++.exe
+	WinWait, ahk_exe notepad++.exe
+	WinActivate
+Return
+
+; qtpass
+#+p::
+	Run, C:\Program Files (x86)\QtPass\qtpass.exe
+	WinWait, ahk_exe qtpass.exe
+	WinActivate
+Return
+
 ; Bulk Crap Uninstaller
 #u::
 	Run, C:\Program Files\BCUninstaller\win-x64\BCUninstaller.exe
