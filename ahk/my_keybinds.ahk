@@ -1,10 +1,10 @@
 ;Close active window
 #q::WinClose A
 
-; Brave Browser
+; Firefox Browser
 #w::
-	Run, C:\Users\user\AppData\Local\BraveSoftware\Brave-Browser\Application\brave.exe
-	WinWait, ahk_exe brave.exe
+	Run, C:\Program Files\Mozilla Firefox\firefox.exe
+	WinWait, ahk_exe firefox.exe
 	WinActivate
 Return
 
@@ -19,6 +19,20 @@ Return
 #+n::
 	Run, notepad++.exe
 	WinWait, ahk_exe notepad++.exe
+	WinActivate
+Return
+
+; Universal Media Server
+#+u::
+	Run, C:\Program Files (x86)\Universal Media Server\UMS.exe
+	WinWait, ahk_exe UMS.exe
+	WinActivate
+Return
+
+; JDownloader
+#+d::
+	Run, C:\Users\user\scoop\apps\jdownloader\current\JDownloader.bat
+	WinWait, ahk_exe javaw.exe
 	WinActivate
 Return
 
