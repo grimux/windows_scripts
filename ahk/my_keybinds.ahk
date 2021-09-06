@@ -1,4 +1,14 @@
-;Close active window
+; Spawn terminal
+#Enter::
+	Run, wt --fullscreen
+	WinWait, ahk_exe wt.exe
+	WinActivate
+Return
+
+; Start xserver for wsl
+#s::Run, startx.cmd
+
+; Close active window
 #q::WinClose A
 
 ; Firefox Browser
@@ -33,6 +43,13 @@ Return
 #+d::
 	Run, C:\Users\user\scoop\apps\jdownloader\current\JDownloader.bat
 	WinWait, ahk_exe javaw.exe
+	WinActivate
+Return
+
+; DoubleCMD
+#y::
+	Run, C:\Program Files\Double Commander\doublecmd.exe
+	WinWait, ahk_exe doublecmd.exe
 	WinActivate
 Return
 
