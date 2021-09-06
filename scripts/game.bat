@@ -4,6 +4,8 @@ SETLOCAL EnableDelayedExpansion
 :: Game backup script
 :: By Jake
 ::
+:: This script is for managing my game saves.  With it I can back them up
+::
 
 set "conf=S:\tools\scripts\game_save_locations.txt"
 

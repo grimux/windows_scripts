@@ -1,5 +1,20 @@
 @echo off
+
+::
+:: Backup script
+:: By Jake
+::
+:: This script is for backing up my important files
+:: External media is used for the backup, such as a portable hard drive.
+::
+
 set "backupdir=D:\Backups"
+
+if not exist %backupdir% (
+	echo The backup drive is not present.
+	echo Should be "%backupdir%"
+	exit /b 1
+)
 
 if "%1" == "" (
 	goto:help
