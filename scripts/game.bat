@@ -15,6 +15,10 @@ if "%1" == "-h" (
 	call:help
 	exit /b 0
 )
+if "%1" == "list" (
+	call:list
+	exit /b 0
+)
 if "%1" == "backup" (
 	call:backup
 	exit /b 0
@@ -30,8 +34,21 @@ if "%1" == "delete" (
 if "%1" == "revert" (
 	call:revert %*
 	exit /b 0
+) else (
+	echo Invalid command
+	call:help
+	exit /b 0
 )
 
+
+:: List
+:list
+echo[
+for /f "delims=	 eol=# tokens=1,2" %%a in (%conf%) do (
+	echo %%a
+	if "%%a" == "arc" echo %%b
+)
+exit /b 0
 
 :: Backup
 :backup
