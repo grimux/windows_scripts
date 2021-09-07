@@ -67,6 +67,14 @@ Return
 	WinActivate
 Return
 
+; Toggle between window maximize/restore
+#f::
+	WinGet MX, MinMax, A
+	If MX
+		WinRestore A
+	Else WinMaximize a
+Return
+
 ; Toggle hidden files
 #h::
 RegRead, ValorHidden, HKEY_CURRENT_USER, Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced, Hidden
