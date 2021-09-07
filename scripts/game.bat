@@ -21,6 +21,10 @@ if "%1" == "list" (
 	call:list
 	exit /b 0
 )
+if "%1" == "edit" (
+	call:edit
+	exit /b 0
+)
 if "%1" == "backup" (
 	call:backup
 	exit /b 0
@@ -50,6 +54,12 @@ for /f "delims=	 eol=# tokens=1,2" %%a in (%conf%) do (
 	echo %%a
 	if "%%a" == "arc" echo %%b
 )
+exit /b 0
+
+
+:: Edit script or edit list
+:edit
+notepad++.exe %conf%
 exit /b 0
 
 :: Backup
@@ -132,4 +142,10 @@ exit /b 0
 :: Help section
 :help
 echo Usage: game (command) (flags)
+echo[
+echo backup						Backup saves
+echo restore (name of game)		Restore a save
+echo delete (name of game)		Delete the local save
+echo list						List all game names
+echo edit						Edit the game list
 exit /b 0
