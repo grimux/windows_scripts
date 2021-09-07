@@ -87,6 +87,8 @@ Stardew Valley				C:\Users\user\AppData\Roaming\StardewValley					X:\game-stuff\
 #The Surge 2				C:\Users\user\AppData\Roaming\Goldberg SteamEmu Saves\644830			X:\game-stuff\Games\Surge Series, The\Surge 2, The\Saved Games
 #Trials of Mana				S:\Documents\My Games\Trials of Mana						X:\game-stuff\Games\Mana Series\Trials of Mana\Saved Games
 #Torchlight II				S:\Documents\My Games\Runic Games\Torchlight 2					X:\game-stuff\Games\Torchlight Series\Torchlight II\Saved Games
+Turok					S:\games\Turok\saves								X:\game-stuff\Games\Turok Series\Turok\Saved Games
+#Turok 2				S:\games\Turok2\saves								X:\game-stuff\Games\Turok Series\Turok 2 Seeds of Evil\Saved Games
 #Unreal Gold				S:\Games\Unreal Gold\saves							X:\game-stuff\Games\Unreal Gold\Saved Games
 #Windbound				C:\Users\user\AppData\LocalLow\5 Lives Studios\Windbound			X:\game-stuff\Games\Windbound\Saved Games
 #Witcher 3				S:\Documents\The Witcher 3							X:\game-stuff\Games\Witcher Series\Witcher 3, The\Saved Games
