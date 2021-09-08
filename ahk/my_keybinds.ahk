@@ -6,7 +6,7 @@
 Return
 
 ; Start xserver for wsl
-#s::Run, startx.cmd
+#s::Run, toggle-vcxsrv.cmd
 
 ; Close active window
 #q::WinClose A
