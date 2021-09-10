@@ -75,8 +75,9 @@ if "%1" == "revert" (
 :list
 echo[
 for /f "delims=	 eol=# tokens=1,2" %%a in (%conf%) do (
-	echo %%a
-	if "%%a" == "arc" echo %%b
+	if "%%a" == "arc" (
+		echo %%b
+	) else echo %%a
 )
 exit /b 0
 ::=========================================================================================
@@ -104,19 +105,16 @@ exit /b 1
 ::=========================================================================================
 
 
-:: Edit
+:edit
 ::=========================================================================================
 :: Call to edit the game list
-:edit
 notepad++.exe %conf%
 exit /b 0
 ::=========================================================================================
 
 
-
-:: Backup
-::=========================================================================================
 :backup
+::=========================================================================================
 echo Backing up saves...
 echo[
 :: Create temp file with archives removed
@@ -139,11 +137,9 @@ exit /b 0
 ::=========================================================================================
 
 
-
-:: Archive
+:archive
 ::=========================================================================================
 :: Backup folders in archive mode.  For example, emulators and Goldberg saves
-:archive
 echo Backing up archives...
 echo[
 :: Create a temporary file with only archives
@@ -171,15 +167,14 @@ exit /b 0
 
 
 
-:: Restore
+:restore
 ::=========================================================================================
 :: Restore a game save
-:restore
 :: Remove first argument and take the rest
 for /f "usebackq tokens=1*" %%i in (`echo %*`) DO @ set params=%%j
 
 :: Loop through text file
-for /f "delims=	 eol=# tokens=1,2,3" %%a in (%conf%) do (
+for /f "delims=	 eol=# tokens=1,2,3,4" %%a in (%conf%) do (
 	REM %%a=game name
 	REM %%b=local save
 	REM %%c=backup save
@@ -195,16 +190,31 @@ for /f "delims=	 eol=# tokens=1,2,3" %%a in (%conf%) do (
 		echo Done, have fun^^!
 		exit /b 0
 	)
+	REM %%a=arc
+	REM %%b=game name
+	REM %%c=local save
+	REM %%d=backup save
+	if "%%a" == "arc" if "%%b" == "%params%" (
+		if not exist "%%d" (
+			echo Backup archive for %%b does not exist.
+			exit /b 1
+		)
+		if exist "%%c" echo Local archive already present & exit /b 0
+		echo Restoring archive %%b
+		echo Archive found.
+		7z x -mmt9 "%%d" -o"%%c/../"
+		echo Done, have fun ^^!
+		exit /b 0
+	) 
 )
-
+echo Game not in list.
 exit /b 0
 ::=========================================================================================
 
 
 
-:: Delete
-::=========================================================================================
 :delete
+::=========================================================================================
 :: Remove first argument and take the rest
 for /f "usebackq tokens=1*" %%i in (`echo %*`) DO @ set params=%%j
 :: Loop through text file
@@ -223,15 +233,29 @@ for /f "delims=	 eol=# tokens=1,2,3" %%a in (%conf%) do (
 		echo Done
 		exit /b 0
 	)
+	REM %%a=arc
+	REM %%b=game name
+	REM %%c=local save
+	REM %%d=backup save
+	if "%%a" == "arc" if "%%b" == "%params%" (
+		if not exist "%%c" (
+			echo Local archive for %%b does not exist.
+			exit /b 1
+		)
+		echo Deleting %%b
+		echo Local archive found, removing...
+		rmdir /S /Q "%%c"
+		echo Done
+		exit /b 0
+	)
 )
+echo Game not in list.
 exit /b 0
 ::=========================================================================================
 
 
-
-:: Revert a save
-::=========================================================================================
 :revert
+::=========================================================================================
 call:delete %*
 echo[
 call:restore %*
