@@ -32,10 +32,25 @@ if "%1" == "settings" (
 	call:settings
 	exit /b 0
 )
+if "%1" == "screenshots" (
+	call:screenshots
+	exit /b 0
+)
+if "%1" == "pictures" (
+	call:pictures
+	exit /b 0
+)
+if "%1" == "music" (
+	call:music
+	exit /b 0
+)
 if "%1" == "all" (
-	goto:docs
-	goto:wsl
-	goto:settings
+	call:docs
+	call:wsl
+	call:settings
+	call:pictures
+	call:music
+	call:screenshots
 	exit /b 0
 ) else (
 	echo Invalid command.
@@ -66,6 +81,24 @@ exit /b 0
 exit /b 0
 
 
+:: Screenshots and wallpapers
+:screenshots
+ROBOCOPY.EXE S:\game-screenshots\ %backupdir%\game-screenshots-jake /E /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
+ROBOCOPY.EXE S:\wallpapers\ %backupdir%\wallpapers-jake /E /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
+ROBOCOPY.EXE S:\screenshots\ %backupdir%\screenshots-jake /E /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
+exit /b 0
+
+
+:: Pictures
+:pictures
+ROBOCOPY.EXE X:\Pictures\ %backupdir%\pictures /E /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
+exit /b 0
+
+
+:: Music
+:music
+ROBOCOPY.EXE S:\music\ %backupdir%\music /E /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
+
 :: Help Section
 :help
 echo Usage: backup (command) [flags]
@@ -74,5 +107,8 @@ echo[
 echo docs		Backup documents
 echo wsl		Backup wsl
 echo settings	Backup settings (windows, linux, dotfiles...)
+echo screenshots	Backup screenshots and wallpapers
+echo pictures	Backup pictures
+echo music		Backup music
 echo all		All of the above
 exit /b 0
