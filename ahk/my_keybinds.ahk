@@ -53,6 +53,13 @@ Return
 	WinActivate
 Return
 
+; Calculator
+#c::
+	Run, calc1.exe
+	WinWait, ahk_exe calc1.exe
+	WinActivate
+Return
+
 ; qtpass
 #+p::
 	Run, C:\Program Files (x86)\QtPass\qtpass.exe
