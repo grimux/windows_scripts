@@ -28,14 +28,14 @@ Dragon Quest Builders 2			S:\Documents\My Games\DRAGON QUEST BUILDERS II					X:\
 #Dragon's Dogma				C:\Users\user\AppData\Roaming\Goldberg SteamEmu Saves\367500			X:\game-stuff\game-collection\Dragon's Dogma\Saved Games
 #Dungeon Siege				S:\Documents\Dungeon Siege LOA							X:\game-stuff\game-collection\Dungeon Siege Series\Dungeon Siege\Saved Games
 #Dusk					S:\Games\DUSK\saves								X:\game-stuff\game-collection\Dusk\saved games
-#Duskers					S:\Documents\My Games\Duskers							X:\game-stuff\game-collection\Duskers\saved games
+Duskers					S:\Documents\My Games\Duskers							X:\game-stuff\game-collection\Duskers\saved games
 #Dying Light				C:\Users\Public\Documents\Steam\CODEX\239140					X:\game-stuff\game-collection\Dying Light\Saved Games
 Earth Defense Force WB			C:\Users\user\AppData\Local\EDFWB						X:\game-stuff\game-collection\Earth Defense Force Series\Earth Defense Force - World Brothers\saved games
 #Evil Within				C:\Users\user\Saved Games\TangoGameworks\The Evil Within			X:\game-stuff\game-collection\Evil Within Series\Evil Within, The\saved games
 #Evil Within 2				C:\Users\user\Saved Games\TangoGameworks\The Evil Within 2			X:\game-stuff\game-collection\Evil Within Series\Evil Within 2, The\saved games
 #Far Cry 5				C:\Users\Public\Documents\uPlay\CODEX\Saves\FarCry5				X:\game-stuff\game-collection\Far Cry Series\Far Cry 5\Saved Games
 Factorio				C:\Users\user\AppData\Roaming\Factorio\saves					X:\game-stuff\game-collection\Factorio\saved games
-#Final Fantasy VII			S:\Games\FINAL FANTASY VII\save							X:\game-stuff\game-collection\Final Fantasy Series\Final Fantasy VII\Saved Games
+Final Fantasy VII			S:\Games\final-fantasy-vii\save							X:\game-stuff\game-collection\Final Fantasy Series\Final Fantasy VII\Saved Games
 #Grand Theft Auto III			S:\Documents\GTA3 User Files							X:\game-stuff\game-collection\Grand Theft Auto Series\Grand Theft Auto III\Saved Games
 #Grand Theft Auto Vice City		S:\Documents\GTAVC User Files							X:\game-stuff\game-collection\Grand Theft Auto Series\Grand Theft Auto Vice City\Saved Games
 #Grand Theft Auto San Andreas		S:\Documents\GTA San Andreas User Files						X:\game-stuff\game-collection\Grand Theft Auto Series\Grand Theft Auto San Andreas\Saved Games
@@ -49,6 +49,8 @@ Factorio				C:\Users\user\AppData\Roaming\Factorio\saves					X:\game-stuff\game-
 #Horizon Zero Dawn			S:\Documents\Horizon Zero Dawn							X:\game-stuff\game-collection\Horizon Zero Dawn\Saved Games
 #It Lurks Below				C:\Users\user\AppData\Local\Graybeard Games\It Lurks Below			X:\game-stuff\game-collection\It Lurks Below\Saved Games
 #Kingdoms of Amalur Remaster		C:\Users\user\AppData\Roaming\Goldberg SteamEmu Saves\1041720			X:\game-stuff\game-collection\Kingdoms of Amalur Series\Kingdoms of Amalur - Re-Reckoning\Saved Games
+#Manhunt					S:\Documents\Manhunt User Files							X:\game-stuff\game-collection\Manhunt Series\Manhunt\Saved Games
+Manhunt 2				C:\Users\user\AppData\Local\Rockstar Games\Manhunt 2				X:\game-stuff\game-collection\Manhunt Series\Manhunt 2\Saved Games
 #Monster Hunter World			S:\Games\Monster Hunter World - Iceborne\PARADOX\582010				X:\game-stuff\game-collection\Monster Hunter World\Saved Games
 #Monster Sanctuary			S:\Documents\My Games\Monster Sanctuary						X:\game-stuff\game-collection\Monster Sanctuary\Saved Games
 #Mortal Shell				S:\Documents\My Games\MortalShell						X:\game-stuff\game-collection\Mortal Shell\Saved Games
@@ -56,7 +58,7 @@ Factorio				C:\Users\user\AppData\Roaming\Factorio\saves					X:\game-stuff\game-
 #Nier Automata				S:\Documents\My Games\NieR_Automata						X:\game-stuff\game-collection\NieR Series\NieR - Automata\Saved Games
 #Ni no Kuni				C:\Users\user\AppData\Roaming\Goldberg SteamEmu Saves\798460			X:\game-stuff\game-collection\Ni no Kuni Series\Ni no Kuni\Saved Games
 #Nioh					S:\Documents\KoeiTecmo\NIOH							X:\game-stuff\game-collection\Nioh\Saved Games
-#No Man's Sky				C:\Users\user\AppData\Roaming\HelloGames\NMS					X:\game-stuff\game-collection\No Man's Sky\Saved Games
+No Man's Sky				C:\Users\user\AppData\Roaming\HelloGames\NMS					X:\game-stuff\game-collection\No Man's Sky\Saved Games
 #Outer Wilds				C:\Users\user\AppData\LocalLow\Mobius Digital\Outer Wilds			X:\game-stuff\game-collection\Outer Wilds\Saved Games
 #Outer Worlds				C:\Users\user\Saved Games\The Outer Worlds					X:\game-stuff\game-collection\Outer Worlds, The\Saved Games
 #Outward				S:\Games\Outward\SaveGames							X:\game-stuff\game-collection\Outward\Saved Games
@@ -115,7 +117,7 @@ arc			DuckStation			S:\Games\Emulation\duckstation					X:\game-stuff\emulation\P
 #arc			Fallout 4			C:\Users\user\AppData\Local\ModOrganizer\Fallout 4		X:\game-stuff\game-collection\Fallout Series\Fallout 4\Saved Games\Mod_Organizer-FO4.7z
 arc			Goldberg			C:\Users\user\AppData\Roaming\Goldberg SteamEmu Saves		X:\game-stuff\steam-emulators\Goldberg\Goldberg Game Saves\Goldberg_SteamEmu_Saves.7z
 #arc			pcsx2				S:\Games\Emulation\pcsx2					X:\game-stuff\emulation\Playstation 2\My_pcsx2.7z
-arc			Persona 3			S:\Games\persona 3						X:\game-stuff\game-collection\Persona Series\Persona 3 FES\Saved Games\persona3_saves.7z
+arc			Persona 3			S:\Games\persona-3						X:\game-stuff\game-collection\Persona Series\Persona 3 FES\Saved Games\persona3_saves.7z
 arc			Quake				S:\Games\Quake							X:\game-stuff\game-collection\Quake Series\Quake\jake_quake.7z
 #arc			rpcs3				S:\Games\Emulation\rpcs3					X:\game-stuff\emulation\Playstation 3\My_RPCS3.7z
 arc			shortcuts			C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Games\	X:\archive-jake\my-settings\windows\game-shortcuts\games.7z
