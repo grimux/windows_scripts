@@ -15,7 +15,7 @@ Cloudpunk				C:\Users\user\AppData\LocalLow\ION LANDS\Cloudpunk			X:\game-stuff\
 Code Vein				C:\Users\user\AppData\Local\CodeVein						X:\game-stuff\game-collection\Code Vein\Saved Games
 #Cyberpunk 2077				C:\Users\user\Saved Games\CD Projekt Red\Cyberpunk 2077				X:\game-stuff\game-collection\Cyberpunk 2077\Saved Games
 #Darkwood				C:\Users\user\AppData\LocalLow\Acid Wizard Studio\DARKWOOD\			X:\game-stuff\game-collection\Darkwood\Saved Games
-#Dark Souls Remastered			S:\Documents\NBGI\DARK SOULS REMASTERED						X:\game-stuff\game-collection\Dark Souls Series\Dark Souls Remastered\Saved Games
+Dark Souls Remastered			S:\Documents\NBGI\DARK SOULS REMASTERED						X:\game-stuff\game-collection\Dark Souls Series\Dark Souls Remastered\Saved Games
 #Dark Souls II				C:\Users\user\AppData\Roaming\DarkSoulsII					X:\game-stuff\game-collection\Dark Souls Series\Dark Souls II\Saved Games
 Dark Souls III				C:\Users\user\AppData\Roaming\DarkSoulsIII					X:\game-stuff\game-collection\Dark Souls Series\Dark Souls III\Saved Games
 #Deadly Premonition			S:\Games\Deadly Premonition\savedata						X:\game-stuff\game-collection\Deadly Premonition\Saved Games
@@ -33,8 +33,9 @@ Duskers					S:\Documents\My Games\Duskers							X:\game-stuff\game-collection\Du
 Earth Defense Force WB			C:\Users\user\AppData\Local\EDFWB						X:\game-stuff\game-collection\Earth Defense Force Series\Earth Defense Force - World Brothers\saved games
 #Evil Within				C:\Users\user\Saved Games\TangoGameworks\The Evil Within			X:\game-stuff\game-collection\Evil Within Series\Evil Within, The\saved games
 #Evil Within 2				C:\Users\user\Saved Games\TangoGameworks\The Evil Within 2			X:\game-stuff\game-collection\Evil Within Series\Evil Within 2, The\saved games
+#Fable Anniversary			S:\Documents\My Games\FableHD							X:\game-stuff\game-collection\Fable Series\Fable Anniversary\Saved Games
 #Far Cry 5				C:\Users\Public\Documents\uPlay\CODEX\Saves\FarCry5				X:\game-stuff\game-collection\Far Cry Series\Far Cry 5\Saved Games
-Factorio				C:\Users\user\AppData\Roaming\Factorio\saves					X:\game-stuff\game-collection\Factorio\saved games
+Factorio				C:\Users\user\AppData\Roaming\Factorio						X:\game-stuff\game-collection\Factorio\saved games
 Final Fantasy VII			S:\Games\final-fantasy-vii\save							X:\game-stuff\game-collection\Final Fantasy Series\Final Fantasy VII\Saved Games
 #Grand Theft Auto III			S:\Documents\GTA3 User Files							X:\game-stuff\game-collection\Grand Theft Auto Series\Grand Theft Auto III\Saved Games
 #Grand Theft Auto Vice City		S:\Documents\GTAVC User Files							X:\game-stuff\game-collection\Grand Theft Auto Series\Grand Theft Auto Vice City\Saved Games
@@ -49,6 +50,7 @@ Final Fantasy VII			S:\Games\final-fantasy-vii\save							X:\game-stuff\game-col
 #Horizon Zero Dawn			S:\Documents\Horizon Zero Dawn							X:\game-stuff\game-collection\Horizon Zero Dawn\Saved Games
 #It Lurks Below				C:\Users\user\AppData\Local\Graybeard Games\It Lurks Below			X:\game-stuff\game-collection\It Lurks Below\Saved Games
 #Kingdoms of Amalur Remaster		C:\Users\user\AppData\Roaming\Goldberg SteamEmu Saves\1041720			X:\game-stuff\game-collection\Kingdoms of Amalur Series\Kingdoms of Amalur - Re-Reckoning\Saved Games
+Lisa					S:\games\LISA\Save0*.rvdata2							X:\game-stuff\game-collection\Lisa\saved games
 #Manhunt					S:\Documents\Manhunt User Files							X:\game-stuff\game-collection\Manhunt Series\Manhunt\Saved Games
 Manhunt 2				C:\Users\user\AppData\Local\Rockstar Games\Manhunt 2				X:\game-stuff\game-collection\Manhunt Series\Manhunt 2\Saved Games
 #Monster Hunter World			S:\Games\Monster Hunter World - Iceborne\PARADOX\582010				X:\game-stuff\game-collection\Monster Hunter World\Saved Games
@@ -58,6 +60,7 @@ Manhunt 2				C:\Users\user\AppData\Local\Rockstar Games\Manhunt 2				X:\game-stu
 #Nier Automata				S:\Documents\My Games\NieR_Automata						X:\game-stuff\game-collection\NieR Series\NieR - Automata\Saved Games
 #Ni no Kuni				C:\Users\user\AppData\Roaming\Goldberg SteamEmu Saves\798460			X:\game-stuff\game-collection\Ni no Kuni Series\Ni no Kuni\Saved Games
 #Nioh					S:\Documents\KoeiTecmo\NIOH							X:\game-stuff\game-collection\Nioh\Saved Games
+#Nioh 2
 No Man's Sky				C:\Users\user\AppData\Roaming\HelloGames\NMS					X:\game-stuff\game-collection\No Man's Sky\Saved Games
 #Outer Wilds				C:\Users\user\AppData\LocalLow\Mobius Digital\Outer Wilds			X:\game-stuff\game-collection\Outer Wilds\Saved Games
 #Outer Worlds				C:\Users\user\Saved Games\The Outer Worlds					X:\game-stuff\game-collection\Outer Worlds, The\Saved Games
