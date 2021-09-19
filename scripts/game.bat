@@ -126,7 +126,6 @@ for /f "delims=	 eol=# tokens=1,2,3" %%a in (%temp%) do (
 	echo %%a
 	if not exist %%b (
 		echo Local save not found, skipping...
-		exit /b 0
 	)
 	if not exist %%c echo Backup location not found...Creating...
 	xcopy /IDEY "%%b" "%%c"
