@@ -74,6 +74,13 @@ Return
 	WinActivate
 Return
 
+; Open my wiki in browser
+#+w::
+	Run, explorer S:\documents\vimwiki\_site\index.html
+	WinWait, ahk_exe firefox.exe
+	WinActivate
+Return
+
 ; Toggle between window maximize/restore
 #f::
 	WinGet MX, MinMax, A
