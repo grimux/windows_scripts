@@ -10,17 +10,16 @@
 
 set "backupdir=D:\Backups"
 
-if not exist %backupdir% (
-	echo The backup drive is not present.
-	echo Should be "%backupdir%"
-	exit /b 1
-)
-
 if "%1" == "" (
-	goto:help
+	call:help
+	exit /b 0
+)
+if "%1" == "help" (
+	call:help
 	exit /b 0
 )
 if "%1" == "docs" (
+	call:drive_check || exit /b 1
 	call:docs
 	exit /b 0
 )
@@ -33,18 +32,22 @@ if "%1" == "settings" (
 	exit /b 0
 )
 if "%1" == "screenshots" (
+	call:drive_check || exit /b 1
 	call:screenshots
 	exit /b 0
 )
 if "%1" == "pictures" (
+	call:drive_check || exit /b 1
 	call:pictures
 	exit /b 0
 )
 if "%1" == "music" (
+	call:drive_check || exit /b 1
 	call:music
 	exit /b 0
 )
 if "%1" == "all" (
+	call:drive_check || exit /b 1
 	call:docs
 	call:wsl
 	call:settings
@@ -147,3 +150,11 @@ echo pictures	Backup pictures
 echo music		Backup music
 echo all		All of the above
 exit /b 0
+
+:: Check for backup drive
+:drive_check
+if not exist %backupdir% (
+	echo The backup drive is not present.
+	echo Should be "%backupdir%"
+	exit /b 1
+) else exit /b 0
