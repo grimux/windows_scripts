@@ -1,2 +1,2 @@
 #NoTrayIcon ; To prevent momentary icon pop-up
-run .\startx.bat,,hide 
+run ..\scripts\startx.bat,,hide 
