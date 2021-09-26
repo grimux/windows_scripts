@@ -104,6 +104,7 @@ Turok					S:\games\Turok\saves								X:\game-stuff\game-collection\Turok Series
 Witcher 3				S:\Documents\The Witcher 3							X:\game-stuff\game-collection\Witcher Series\Witcher 3, The\Saved Games
 #Xuan-Yuan Sword 7			C:\Users\user\AppData\Local\SOFTSTAR\SWD7					X:\game-stuff\game-collection\Xuan-Yuan Series\Xuan-Yuan Sword VII\Saved Games
 #Yakuza 0				C:\Users\Public\Documents\Steam\CODEX\638970\remote				X:\game-stuff\game-collection\Yakuza Series\Yakuza 0\Saved Games
+Ys Origin				C:\Users\user\Saved Games\FALCOM\yso_win					X:\game-stuff\game-collection\Ys Series\Ys Origin\saved games
 #Ys I					C:\Users\user\Saved Games\FALCOM\ys12c\ys1					X:\game-stuff\game-collection\Ys Series\Ys I\Saved Games
 #Zombie Army 4				C:\Users\user\AppData\Local\Zombie Army 4					X:\game-stuff\game-collection\Sniper Elite - Zombie Army Series\Zombie Army 4\Saved Games
 
