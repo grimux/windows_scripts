@@ -15,7 +15,7 @@ Cloudpunk				C:\Users\user\AppData\LocalLow\ION LANDS\Cloudpunk			X:\game-stuff\
 Code Vein				C:\Users\user\AppData\Local\CodeVein						X:\game-stuff\game-collection\Code Vein\Saved Games
 #Cyberpunk 2077				C:\Users\user\Saved Games\CD Projekt Red\Cyberpunk 2077				X:\game-stuff\game-collection\Cyberpunk 2077\Saved Games
 Darkwood				C:\Users\user\AppData\LocalLow\Acid Wizard Studio\DARKWOOD\			X:\game-stuff\game-collection\Darkwood\Saved Games
-#Dark Souls Remastered			S:\Documents\NBGI\DARK SOULS REMASTERED						X:\game-stuff\game-collection\Dark Souls Series\Dark Souls Remastered\Saved Games
+Dark Souls Remastered			S:\Documents\NBGI\DARK SOULS REMASTERED						X:\game-stuff\game-collection\Dark Souls Series\Dark Souls Remastered\Saved Games
 #Dark Souls II				C:\Users\user\AppData\Roaming\DarkSoulsII					X:\game-stuff\game-collection\Dark Souls Series\Dark Souls II\Saved Games
 Dark Souls III				C:\Users\user\AppData\Roaming\DarkSoulsIII					X:\game-stuff\game-collection\Dark Souls Series\Dark Souls III\Saved Games
 #Deadly Premonition			S:\Games\Deadly Premonition\savedata						X:\game-stuff\game-collection\Deadly Premonition\Saved Games
@@ -61,7 +61,7 @@ My Time at Portia			C:\Users\user\AppData\LocalLow\Pathea Games\My Time at Porti
 #Ni no Kuni				C:\Users\user\AppData\Roaming\Goldberg SteamEmu Saves\798460			X:\game-stuff\game-collection\Ni no Kuni Series\Ni no Kuni\Saved Games
 #Nioh					S:\Documents\KoeiTecmo\NIOH							X:\game-stuff\game-collection\Nioh\Saved Games
 #Nioh 2
-#No Man's Sky				C:\Users\user\AppData\Roaming\HelloGames\NMS					X:\game-stuff\game-collection\No Man's Sky\Saved Games
+No Man's Sky				C:\Users\user\AppData\Roaming\HelloGames\NMS					X:\game-stuff\game-collection\No Man's Sky\Saved Games
 #Outer Wilds				C:\Users\user\AppData\LocalLow\Mobius Digital\Outer Wilds			X:\game-stuff\game-collection\Outer Wilds\Saved Games
 #Outer Worlds				C:\Users\user\Saved Games\The Outer Worlds					X:\game-stuff\game-collection\Outer Worlds, The\Saved Games
 #Outward				S:\Games\Outward\SaveGames							X:\game-stuff\game-collection\Outward\Saved Games
