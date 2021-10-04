@@ -35,7 +35,7 @@ Return
 ; Universal Media Server
 #+u::
 	Run, C:\Program Files (x86)\Universal Media Server\UMS.exe
-	WinWait, ahk_exe UMS.exe
+	WinWait, ahk_exe javaw.exe
 	WinActivate
 Return
 
