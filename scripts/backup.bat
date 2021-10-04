@@ -8,8 +8,11 @@
 :: External media is used for the backup, such as a portable hard drive.
 ::
 
+:: Drive locations
 set "backupdir=D:\Backups"
+set "localdir=S:\"
 
+:: Flow
 if "%1" == "" (
 	call:help
 	exit /b 0
@@ -55,7 +58,12 @@ if "%1" == "all" (
 	call:music
 	call:screenshots
 	exit /b 0
-) else (
+)
+if "%1" == "restore" (
+	call:drive_check || exit /b 1
+	call:restore
+	exit /b 0
+ )else (
 	echo Invalid command.
 	goto:help
 	exit /b 0
@@ -82,6 +90,8 @@ echo ====================================================================
 echo Backing up Arch wsl install...
 echo --------------------------------------------------------------------
 wsl --export Arch X:\archive-jake\Backups\wsl\wsl_arch.tar.gz
+ROBOCOPY.EXE X:\archive-jake\Backups\wsl %backupdir%\wsl /E /J /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16 /NJH /NJS /ETA /XO
+rem xcopy /DEY /J X:\archive-jake\Backups\wsl %backupdir%\wsl
 echo[
 echo Done!
 echo ====================================================================
@@ -137,6 +147,22 @@ echo Done!
 echo ====================================================================
 exit /b 0
 
+:: Restore
+:restore
+echo ====================================================================
+echo Restoring documents
+echo --------------------------------------------------------------------
+echo[
+echo This script will perform a dry-run first, please check the log to ensure no
+echo files are overwritten or lost.
+echo[
+pause
+ROBOCOPY.EXE %backupdir%\docs-jake\ S:\documents /L /E /XO /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
+choice /M "Would you like to continue?"
+if ERRORLEVEL 2 exit /b 0
+ROBOCOPY.EXE %backupdir%\docs-jake\ S:\documents /E /XO /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
+exit /b 0
+
 :: Help Section
 :help
 echo Usage: backup (command) [flags]
@@ -149,9 +175,10 @@ echo screenshots	Backup screenshots and wallpapers
 echo pictures	Backup pictures
 echo music		Backup music
 echo all		All of the above
+echo restore		Restore files
 exit /b 0
 
-:: Check for backup drive
+
 :drive_check
 if not exist %backupdir% (
 	echo The backup drive is not present.
