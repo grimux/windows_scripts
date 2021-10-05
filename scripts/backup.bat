@@ -8,9 +8,10 @@
 :: External media is used for the backup, such as a portable hard drive.
 ::
 
-:: Drive locations
+:: Directory locations
 set "backupdir=D:\Backups"
-set "localdir=S:\"
+set "localdir=S:"
+set "docs-jake=documents"
 
 :: Flow
 if "%1" == "" (
@@ -21,8 +22,11 @@ if "%1" == "help" (
 	call:help
 	exit /b 0
 )
+
+:: Check for external hard drive, if not attached exit script
+call:drive_check || exit /b 1
+
 if "%1" == "docs" (
-	call:drive_check || exit /b 1
 	call:docs
 	exit /b 0
 )
@@ -35,22 +39,18 @@ if "%1" == "settings" (
 	exit /b 0
 )
 if "%1" == "screenshots" (
-	call:drive_check || exit /b 1
 	call:screenshots
 	exit /b 0
 )
 if "%1" == "pictures" (
-	call:drive_check || exit /b 1
 	call:pictures
 	exit /b 0
 )
 if "%1" == "music" (
-	call:drive_check || exit /b 1
 	call:music
 	exit /b 0
 )
 if "%1" == "all" (
-	call:drive_check || exit /b 1
 	call:docs
 	call:wsl
 	call:settings
@@ -60,7 +60,6 @@ if "%1" == "all" (
 	exit /b 0
 )
 if "%1" == "restore" (
-	call:drive_check || exit /b 1
 	call:restore
 	exit /b 0
  )else (
@@ -74,10 +73,10 @@ if "%1" == "restore" (
 echo ====================================================================
 echo Backing up documents...
 echo --------------------------------------------------------------------
-ROBOCOPY.EXE S:\documents\ %backupdir%\docs-jake /E /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
-ROBOCOPY.EXE S:\documents-serena\ %backupdir%\docs-serena /E /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
-ROBOCOPY.EXE X:\shared-documents\ %backupdir%\docs-shared /E /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
-ROBOCOPY.EXE S:\tools\ %backupdir%\tools-jake /E /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
+call:robocopy_backup S:\documents\ %backupdir%\docs-jake
+call:robocopy_backup S:\documents-serena\ %backupdir%\docs-serena
+call:robocopy_backup X:\shared-documents\ %backupdir%\docs-shared
+call:robocopy_backup S:\tools\ %backupdir%\tools-jake
 echo[
 echo Done!
 echo ====================================================================
@@ -115,9 +114,9 @@ exit /b 0
 echo ====================================================================
 echo Backing up screenshots and wallpapers...
 echo --------------------------------------------------------------------
-ROBOCOPY.EXE S:\game-screenshots\ %backupdir%\game-screenshots-jake /E /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
-ROBOCOPY.EXE S:\wallpapers\ %backupdir%\wallpapers-jake /E /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
-ROBOCOPY.EXE S:\screenshots\ %backupdir%\screenshots-jake /E /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
+call:robocopy_backup S:\game-screenshots\ %backupdir%\game-screenshots-jake/MT:16
+call:robocopy_backup S:\wallpapers\ %backupdir%\wallpapers-jake
+call:robocopy_backup S:\screenshots\ %backupdir%\screenshots-jake
 echo[
 echo Done!
 echo ====================================================================
@@ -129,7 +128,7 @@ exit /b 0
 echo ====================================================================
 echo Backing up pictures...
 echo --------------------------------------------------------------------
-ROBOCOPY.EXE X:\Pictures\ %backupdir%\pictures /E /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
+call:robocopy_backup X:\Pictures\ %backupdir%\pictures
 echo[
 echo Done!
 echo ====================================================================
@@ -141,7 +140,7 @@ exit /b 0
 echo ====================================================================
 echo Backing up music...
 echo --------------------------------------------------------------------
-ROBOCOPY.EXE S:\music\ %backupdir%\music /E /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
+call:robocopy_backup S:\music\ %backupdir%\music
 echo[
 echo Done!
 echo ====================================================================
@@ -163,6 +162,11 @@ if ERRORLEVEL 2 exit /b 0
 ROBOCOPY.EXE %backupdir%\docs-jake\ S:\documents /E /XO /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
 exit /b 0
 
+:: Robocopy backup command
+:robocopy_backup
+ROBOCOPY.EXE %~1 %~2 /E /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
+exit /b 0
+
 :: Help Section
 :help
 echo Usage: backup (command) [flags]
@@ -178,10 +182,13 @@ echo all		All of the above
 echo restore		Restore files
 exit /b 0
 
-
+:: Check if external HDD is mounted
 :drive_check
 if not exist %backupdir% (
 	echo The backup drive is not present.
 	echo Should be "%backupdir%"
 	exit /b 1
-) else exit /b 0
+) else (
+	echo External HDD found.  Commencing backup....
+	exit /b 0
+)
