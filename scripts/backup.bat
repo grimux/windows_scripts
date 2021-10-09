@@ -114,7 +114,7 @@ exit /b 0
 echo ====================================================================
 echo Backing up screenshots and wallpapers...
 echo --------------------------------------------------------------------
-call:robocopy_backup S:\game-screenshots\ %backupdir%\game-screenshots-jake/MT:16
+call:robocopy_backup S:\game-screenshots\ %backupdir%\game-screenshots-jake
 call:robocopy_backup S:\wallpapers\ %backupdir%\wallpapers-jake
 call:robocopy_backup S:\screenshots\ %backupdir%\screenshots-jake
 echo[
