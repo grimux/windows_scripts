@@ -89,6 +89,10 @@ Return
 	Else WinMaximize a
 Return
 
+; Remove default Windows shortcuts
+#;::
+#l::
+
 ; Toggle hidden files
 #h::
 RegRead, ValorHidden, HKEY_CURRENT_USER, Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced, Hidden
