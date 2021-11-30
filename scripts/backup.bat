@@ -9,8 +9,9 @@
 ::
 
 :: Directory locations
-set "backupdir=D:\Backups"
-set "localdir=S:"
+set "backup_dir_small=D:\Backups"
+set "backup_dir_large=Z:"
+set "local_dir=S:"
 set "docs-jake=documents"
 
 :: Flow
@@ -62,7 +63,11 @@ if "%1" == "all" (
 if "%1" == "restore" (
 	call:restore
 	exit /b 0
- )else (
+ )
+if "%1" == "share" (
+	call:share
+	exit /b 0
+) else (
 	echo Invalid command.
 	goto:help
 	exit /b 0
@@ -73,10 +78,10 @@ if "%1" == "restore" (
 echo ====================================================================
 echo Backing up documents...
 echo --------------------------------------------------------------------
-call:robocopy_backup S:\documents\ %backupdir%\docs-jake
-call:robocopy_backup S:\documents-serena\ %backupdir%\docs-serena
-call:robocopy_backup X:\shared-documents\ %backupdir%\docs-shared
-call:robocopy_backup S:\tools\ %backupdir%\tools-jake
+call:robocopy_backup S:\documents\ %backup_dir_small%\docs-jake
+call:robocopy_backup S:\documents-serena\ %backup_dir_small%\docs-serena
+call:robocopy_backup X:\shared-documents\ %backup_dir_small%\docs-shared
+call:robocopy_backup S:\tools\ %backup_dir_small%\tools-jake
 echo[
 echo Done!
 echo ====================================================================
@@ -89,8 +94,8 @@ echo ====================================================================
 echo Backing up Arch wsl install...
 echo --------------------------------------------------------------------
 wsl --export Arch X:\archive-jake\Backups\wsl\wsl_arch.tar.gz
-ROBOCOPY.EXE X:\archive-jake\Backups\wsl %backupdir%\wsl /E /J /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16 /NJH /NJS /ETA /XO
-rem xcopy /DEY /J X:\archive-jake\Backups\wsl %backupdir%\wsl
+ROBOCOPY.EXE X:\archive-jake\Backups\wsl %backup_dir_small%\wsl /E /J /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16 /NJH /NJS /ETA /XO
+rem xcopy /DEY /J X:\archive-jake\Backups\wsl %backup_dir_small%\wsl
 echo[
 echo Done!
 echo ====================================================================
@@ -102,7 +107,7 @@ exit /b 0
 echo ====================================================================
 echo Backing up settings...
 echo --------------------------------------------------------------------
-7z u -up1q0r2x1y2z1w2 -mx9 -mmt16 %backupdir%\settings-jake\my_settings.7z X:\archive-jake\my-settings
+7z u -up1q0r2x1y2z1w2 -mx9 -mmt16 %backup_dir_small%\settings-jake\my_settings.7z X:\archive-jake\my-settings
 echo[
 echo Done!
 echo ====================================================================
@@ -114,9 +119,9 @@ exit /b 0
 echo ====================================================================
 echo Backing up screenshots and wallpapers...
 echo --------------------------------------------------------------------
-call:robocopy_backup S:\game-screenshots\ %backupdir%\game-screenshots-jake
-call:robocopy_backup S:\wallpapers\ %backupdir%\wallpapers-jake
-call:robocopy_backup S:\screenshots\ %backupdir%\screenshots-jake
+call:robocopy_backup S:\game-screenshots\ %backup_dir_small%\game-screenshots-jake
+call:robocopy_backup S:\wallpapers\ %backup_dir_small%\wallpapers-jake
+call:robocopy_backup S:\screenshots\ %backup_dir_small%\screenshots-jake
 echo[
 echo Done!
 echo ====================================================================
@@ -128,7 +133,7 @@ exit /b 0
 echo ====================================================================
 echo Backing up pictures...
 echo --------------------------------------------------------------------
-call:robocopy_backup X:\Pictures\ %backupdir%\pictures
+call:robocopy_backup X:\Pictures\ %backup_dir_small%\pictures
 echo[
 echo Done!
 echo ====================================================================
@@ -140,7 +145,7 @@ exit /b 0
 echo ====================================================================
 echo Backing up music...
 echo --------------------------------------------------------------------
-call:robocopy_backup S:\music\ %backupdir%\music
+call:robocopy_backup S:\music\ %backup_dir_small%\music
 echo[
 echo Done!
 echo ====================================================================
@@ -156,10 +161,19 @@ echo This script will perform a dry-run first, please check the log to ensure no
 echo files are overwritten or lost.
 echo[
 pause
-ROBOCOPY.EXE %backupdir%\docs-jake\ S:\documents /L /E /XO /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
+ROBOCOPY.EXE %backup_dir_small%\docs-jake\ S:\documents /L /E /XO /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
 choice /M "Would you like to continue?"
 if ERRORLEVEL 2 exit /b 0
-ROBOCOPY.EXE %backupdir%\docs-jake\ S:\documents /E /XO /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
+ROBOCOPY.EXE %backup_dir_small%\docs-jake\ S:\documents /E /XO /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
+exit /b 0
+
+:: Share drive backup
+:share
+echo ====================================================================
+echo Backing up share drive to %backup_dir_large%
+echo --------------------------------------------------------------------
+echo[
+ROBOCOPY.EXE X:\ %backup_dir_large%\ /E /J /DCOPY:DAT /MIR /XA:S /R:1 /W:3 /MT:16
 exit /b 0
 
 :: Robocopy backup command
@@ -180,13 +194,14 @@ echo pictures	Backup pictures
 echo music		Backup music
 echo all		All of the above
 echo restore		Restore files
+echo share		Backup Share-Drive to other backup drive
 exit /b 0
 
 :: Check if external HDD is mounted
 :drive_check
-if not exist %backupdir% (
+if not exist %backup_dir_small% (
 	echo The backup drive is not present.
-	echo Should be "%backupdir%"
+	echo Should be "%backup_dir_small%"
 	exit /b 1
 ) else (
 	echo External HDD found.  Commencing backup....
