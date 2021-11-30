@@ -34,14 +34,15 @@ Earth Defense Force WB			C:\Users\user\AppData\Local\EDFWB						X:\game-stuff\ga
 #Evil Within				C:\Users\user\Saved Games\TangoGameworks\The Evil Within			X:\game-stuff\game-collection\Evil Within Series\Evil Within, The\saved games
 #Evil Within 2				C:\Users\user\Saved Games\TangoGameworks\The Evil Within 2			X:\game-stuff\game-collection\Evil Within Series\Evil Within 2, The\saved games
 #Fable Anniversary			S:\Documents\My Games\FableHD							X:\game-stuff\game-collection\Fable Series\Fable Anniversary\Saved Games
-#Far Cry 5				C:\Users\Public\Documents\uPlay\CODEX\Saves\FarCry5				X:\game-stuff\game-collection\Far Cry Series\Far Cry 5\Saved Games
+Far Cry 5				C:\Users\Public\Documents\uPlay\CODEX\Saves\FarCry5				X:\game-stuff\game-collection\Far Cry Series\Far Cry 5\Saved Games
+Far Cry Primal				S:\games\Far Cry - Primal\save							X:\game-stuff\game-collection\Far Cry Series\Far Cry Primal\saved games
 Factorio				C:\Users\user\AppData\Roaming\Factorio						X:\game-stuff\game-collection\Factorio\saved games
-#Final Fantasy VII			S:\Games\final-fantasy-vii\save							X:\game-stuff\game-collection\Final Fantasy Series\Final Fantasy VII\Saved Games
-#Grand Theft Auto III			S:\Documents\GTA3 User Files							X:\game-stuff\game-collection\Grand Theft Auto Series\Grand Theft Auto III\Saved Games
+Final Fantasy VII			S:\Games\final-fantasy-vii\save							X:\game-stuff\game-collection\Final Fantasy Series\Final Fantasy VII\Saved Games
+Grand Theft Auto III			S:\Documents\GTA3 User Files							X:\game-stuff\game-collection\Grand Theft Auto Series\Grand Theft Auto III\Saved Games
 #Grand Theft Auto Vice City		S:\Documents\GTAVC User Files							X:\game-stuff\game-collection\Grand Theft Auto Series\Grand Theft Auto Vice City\Saved Games
 #Grand Theft Auto San Andreas		S:\Documents\GTA San Andreas User Files						X:\game-stuff\game-collection\Grand Theft Auto Series\Grand Theft Auto San Andreas\Saved Games
 #Grand Theft Auto IV			S:\Documents\Rockstar Games\GTA IV						X:\game-stuff\game-collection\Grand Theft Auto Series\Grand Theft Auto IV\Saved Games
-#Grand Theft Auto V			C:\Users\user\AppData\Roaming\Goldberg SocialClub Emu Saves\GTA V		X:\game-stuff\game-collection\Grand Theft Auto Series\Grand Theft Auto V\Saved Games
+Grand Theft Auto V			C:\Users\user\AppData\Roaming\Goldberg SocialClub Emu Saves\GTA V		X:\game-stuff\game-collection\Grand Theft Auto Series\Grand Theft Auto V\Saved Games
 Graveyard Keeper			C:\Users\user\AppData\LocalLow\Lazy Bear Games\Graveyard Keeper			X:\game-stuff\game-collection\Graveyard Keeper\Saved Games
 #Grim Dawn				S:\Documents\My Games\Grim Dawn							X:\game-stuff\game-collection\Grim Dawn\Saved Games
 #Greedfall				S:\Documents\GreedFall								X:\game-stuff\game-collection\Greedfall\Saved Games
@@ -90,7 +91,7 @@ Silent Hill 2				S:\Games\silent-hill-2\data\save						X:\game-stuff\game-collec
 Stardew Valley				C:\Users\user\AppData\Roaming\StardewValley					X:\game-stuff\game-collection\Stardew Valley\Saved Games
 #Story of Seasons			C:\Users\user\AppData\Roaming\Goldberg SteamEmu Saves\965230			X:\game-stuff\game-collection\Story of Seasons Series\Doraemon - Story of Seasons\saved games
 #Subnautica				C:\games\Subnautica\SNAppData\SavedGames					X:\game-stuff\game-collection\Subnautica Series\Subnautica\Saved Games
-Succubus				C:\Users\user\AppData\Local\Succubus						X:\game-stuff\game-collection\Succubus\saved games
+#Succubus				C:\Users\user\AppData\Local\Succubus						X:\game-stuff\game-collection\Succubus\saved games
 #Super Mario 64				C:\Users\user\AppData\Roaming\sm64ex						X:\game-stuff\game-collection\Super Mario 64\Saved Games
 #Terraria				S:\Documents\My Games\Terraria							X:\game-stuff\game-collection\Terraria\Saved Games
 #The Surge				C:\Users\Public\Documents\Steam\CODEX\378540					X:\game-stuff\game-collection\Surge Series, The\Surge, The\Saved Games
@@ -100,11 +101,13 @@ Succubus				C:\Users\user\AppData\Local\Succubus						X:\game-stuff\game-collect
 Turok					S:\games\Turok\saves								X:\game-stuff\game-collection\Turok Series\Turok\Saved Games
 #Turok 2				S:\games\Turok2\saves								X:\game-stuff\game-collection\Turok Series\Turok 2 Seeds of Evil\Saved Games
 #Unreal Gold				S:\Games\Unreal Gold\saves							X:\game-stuff\game-collection\Unreal Gold\Saved Games
+Undead Horde				C:\Users\user\AppData\Roaming\10tons\UndeadHorde				X:\game-stuff\game-collection\Undead Horde\saved games
+Valheim					C:\Users\user\AppData\LocalLow\IronGate\Valheim					X:\game-stuff\game-collection\Valheim\saved games
 #Windbound				C:\Users\user\AppData\LocalLow\5 Lives Studios\Windbound			X:\game-stuff\game-collection\Windbound\Saved Games
-Witcher 3				S:\Documents\The Witcher 3							X:\game-stuff\game-collection\Witcher Series\Witcher 3, The\Saved Games
+#Witcher 3				S:\Documents\The Witcher 3							X:\game-stuff\game-collection\Witcher Series\Witcher 3, The\Saved Games
 #Xuan-Yuan Sword 7			C:\Users\user\AppData\Local\SOFTSTAR\SWD7					X:\game-stuff\game-collection\Xuan-Yuan Series\Xuan-Yuan Sword VII\Saved Games
 #Yakuza 0				C:\Users\Public\Documents\Steam\CODEX\638970\remote				X:\game-stuff\game-collection\Yakuza Series\Yakuza 0\Saved Games
-Ys Origin				C:\Users\user\Saved Games\FALCOM\yso_win					X:\game-stuff\game-collection\Ys Series\Ys Origin\saved games
+#Ys Origin				C:\Users\user\Saved Games\FALCOM\yso_win					X:\game-stuff\game-collection\Ys Series\Ys Origin\saved games
 #Ys I					C:\Users\user\Saved Games\FALCOM\ys12c\ys1					X:\game-stuff\game-collection\Ys Series\Ys I\Saved Games
 #Zombie Army 4				C:\Users\user\AppData\Local\Zombie Army 4					X:\game-stuff\game-collection\Sniper Elite - Zombie Army Series\Zombie Army 4\Saved Games
 
@@ -112,20 +115,23 @@ Ys Origin				C:\Users\user\Saved Games\FALCOM\yso_win					X:\game-stuff\game-col
 # Emulators and other Archived Games
 #========================================================================================================================================================================================
 
-arc			1964				S:\Games\Emulation\1964						X:\game-stuff\emulation\N64\1964\My_1964.7z
-arc			bsnes				S:\Games\Emulation\bsnes_hd					X:\game-stuff\emulation\SNES\My_bsnes-hd.7z
-arc			Cemu				S:\Games\Emulation\Cemu						X:\game-stuff\emulation\Wii U\My_Cemu.7z
+#arc			1964				S:\Games\Emulation\1964						X:\game-stuff\emulation\N64\1964\My_1964.7z
+#arc			bsnes				S:\Games\Emulation\bsnes_hd					X:\game-stuff\emulation\SNES\My_bsnes-hd.7z
+#arc			Cemu				S:\Games\Emulation\Cemu						X:\game-stuff\emulation\Wii U\My_Cemu.7z
 arc			Citra				C:\Users\user\AppData\Roaming\Citra				X:\game-stuff\emulation\3DS\My_Citra.7z
-arc			Dolphin				S:\Games\Emulation\Dolphin					X:\game-stuff\emulation\Wii-Gamecube\My_Dolphin.7z
+#arc			Dolphin				S:\Games\Emulation\Dolphin					X:\game-stuff\emulation\Wii-Gamecube\My_Dolphin.7z
 arc			Doom				S:\games\doom							X:\game-stuff\game-collection\Doom Series\Doom + Doom II (1993)\my_doom.7z
-arc			Doom 64				S:\games\doom-64						X:\game-stuff\game-collection\Doom Series\Doom 64\Doom 64 EX\my_doom64.7z
+#arc			Doom 64				S:\games\doom-64						X:\game-stuff\game-collection\Doom Series\Doom 64\Doom 64 EX\my_doom64.7z
 arc			DuckStation			S:\Games\Emulation\duckstation					X:\game-stuff\emulation\Playstation\My_DuckStation.7z
 #arc			Fallout 4			C:\Users\user\AppData\Local\ModOrganizer\Fallout 4		X:\game-stuff\game-collection\Fallout Series\Fallout 4\Saved Games\Mod_Organizer-FO4.7z
 arc			Goldberg			C:\Users\user\AppData\Roaming\Goldberg SteamEmu Saves		X:\game-stuff\steam-emulators\Goldberg\Goldberg Game Saves\Goldberg_SteamEmu_Saves.7z
-arc			Majoras Mask			C:\games\mm64hd							X:\game-stuff\emulation\N64\mm64hd.7z
-arc			pcsx2				S:\Games\Emulation\pcsx2					X:\game-stuff\emulation\Playstation 2\My_pcsx2.7z
+#arc			Majoras Mask			C:\games\mm64hd							X:\game-stuff\emulation\N64\mm64hd.7z
+arc			Minecraft			S:\games\minecraft						X:\game-stuff\game-collection\Minecraft\jakecraft.7z
+#arc			pcsx2				S:\Games\Emulation\pcsx2					X:\game-stuff\emulation\Playstation 2\My_pcsx2.7z
 arc			Persona 3			S:\Games\persona-3						X:\game-stuff\game-collection\Persona Series\Persona 3 FES\Saved Games\persona3_saves.7z
 arc			Quake				S:\Games\Quake							X:\game-stuff\game-collection\Quake Series\Quake\jake_quake.7z
-arc			rpcs3				S:\Games\Emulation\rpcs3					X:\game-stuff\emulation\Playstation 3\My_RPCS3.7z
+#arc			rpcs3				S:\Games\Emulation\rpcs3					X:\game-stuff\emulation\Playstation 3\My_RPCS3.7z
+arc			Skyrim				C:\Users\user\AppData\Local\ModOrganizer\Skyrim Special Edition	X:\game-stuff\game-collection\Elder Scrolls Series\Elder Scrolls V - Skyrim SE, The\Saved Games\mod_organizer_skyrim.7z
 arc			shortcuts			C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Games\	X:\archive-jake\my-settings\windows\game-shortcuts\games.7z
-arc			yuzu				C:\Users\user\AppData\Roaming\yuzu				X:\game-stuff\emulation\Switch\My_yuzu.7z
+arc			Valheim Config			S:\games\Valheim\BepInEx\config\				X:\game-stuff\game-collection\Valheim\configs\valheim-mod-configs.7z
+#arc			yuzu				C:\Users\user\AppData\Roaming\yuzu				X:\game-stuff\emulation\Switch\My_yuzu.7z
