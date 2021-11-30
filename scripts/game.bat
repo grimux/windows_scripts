@@ -152,6 +152,10 @@ for /f "delims=	 eol=# tokens=1,2,3" %%a in (%temp%) do (
 	echo ----------------------------------------------------------------
 	if exist %%b (
 		if not exist %%c echo Backup location not found...Creating...
+		if exist "%%c.tmp" (
+			echo Temporary file found...Deleting...
+			del /Q "%%c.tmp"
+		)
 		7z u -up1q0r2x1y2z1w2 -mx9 -mmt16 "%%c" "%%b"
 	) else echo Local folder not found, skipping...
 
