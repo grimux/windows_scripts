@@ -169,10 +169,11 @@ exit /b 0
 
 
 
-:restore
+
 ::=========================================================================================
 :: Restore a game save
 :: Remove first argument and take the rest
+:restore
 for /f "usebackq tokens=1*" %%i in (`echo %*`) DO @ set params=%%j
 
 :: Loop through text file
