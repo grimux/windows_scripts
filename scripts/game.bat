@@ -10,6 +10,7 @@ SETLOCAL EnableDelayedExpansion
 ::=========================================================================================
 set "conf=S:\tools\scripts\game_save_locations.txt"
 set "temp=S:\tools\scripts\temp.txt"
+
 ::=========================================================================================
 
 
@@ -37,6 +38,10 @@ if "%1" == "edit" (
 )
 if "%1" == "backup" (
 	call:backup
+	exit /b 0
+)
+if "%1" == "prune" (
+	call:prune
 	exit /b 0
 )
 if "%1" == "archive" (
@@ -129,11 +134,55 @@ for /f "delims=	 eol=# tokens=1,2,3" %%a in (%temp%) do (
 	)
 	if not exist %%c echo Backup location not found...Creating...
 	xcopy /IDEY "%%b" "%%c"
+	rem call:check_structure "%%b" "%%c"
 	echo[
 )
 del %temp%
 exit /b 0
 ::=========================================================================================
+
+
+:prune
+echo It is recommended to backup saves before pruning.
+choice /M "Would you like to now?"
+if !ERRORLEVEL! == 1 (
+	call:backup
+	echo done
+	echo Pruning will now commence
+	echo[
+	pause
+)
+echo Pruning old save files...
+echo[
+set "dir_a=S:\tools\scripts\dir_a.txt"
+set "dir_b=S:\tools\scripts\dir_b.txt"
+:: Create temp file with archives removed
+grep -G -v "arc.*" %conf% > %temp%
+for /f "delims=	 eol=# tokens=1,2,3" %%a in (%temp%) do (
+	REM %%a=game name
+	REM %%b=local save
+	REM %%c=backup save
+	echo %%a
+	call:check_structure "%%b" "%%c"
+	if !ERRORLEVEL! == 1 (
+		rem call:prune_files "%%b" "%%c"
+		echo Extra files found. Running robocopy...
+		robocopy "%%b" "%%c" /L /E /DCOPY:DAT /MIR /R:1 /W:3 /MT:16
+		echo Please check the above files and make sure they are okay to delete.
+		choice /M "Do you want to remove the above files?"
+		if !ERRORLEVEL! == 1 (robocopy "%%b" "%%c" /E /DCOPY:DAT /MIR /R:1 /W:3 /MT:16)
+	) else echo Files match
+	echo[
+)
+del %dir_a% %dir_b% %temp%
+exit /b 0
+
+:check_structure
+dir /b /s "%~1" | wc -l > %dir_a%
+dir /b /s "%~2" | wc -l > %dir_b%
+comp "%dir_a%" "%dir_b%" /m >NUL
+rem echo %ERRORLEVEL%
+exit /b %ERRORLEVEL%
 
 
 :archive
@@ -275,6 +324,7 @@ echo[
 echo backup				Backup saves
 echo archive				Backup archives
 echo all				Backup both saves and archives
+echo prune				Remove orphaned saves in share drive
 echo restore (name of game)		Restore a save
 echo delete (name of game)		Delete the local save
 echo list				List all game names
