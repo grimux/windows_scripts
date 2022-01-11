@@ -181,8 +181,8 @@ exit /b 0
 dir /b /s "%~1" | wc -l > %dir_a%
 dir /b /s "%~2" | wc -l > %dir_b%
 comp "%dir_a%" "%dir_b%" /m >NUL
-rem echo %ERRORLEVEL%
-exit /b %ERRORLEVEL%
+rem echo !ERRORLEVEL!
+exit /b !ERRORLEVEL!
 
 
 :archive
