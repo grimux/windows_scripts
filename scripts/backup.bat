@@ -69,7 +69,6 @@ if "%1" == "music" (
 if "%1" == "all" (
 	if "%is_small_connected%" == "0" (exit /b 1)
 	call:docs
-	call:wsl
 	call:settings
 	call:pictures
 	call:music
@@ -265,13 +264,13 @@ echo Usage: backup (command) [flags]
 echo Backup important files to external media.
 echo[
 echo docs		Backup documents
-echo wsl		Backup wsl
 echo settings	Backup settings (windows, linux, dotfiles...)
 echo screenshots	Backup screenshots and wallpapers
 echo pictures	Backup pictures
 echo music		Backup music
 echo all		All of the above
 echo[
+echo wsl		Backup wsl
 echo restore		Restore files
 echo share		Backup Share-Drive to other backup drive
 echo space		Show current space avalible
