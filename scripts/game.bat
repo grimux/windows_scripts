@@ -64,6 +64,10 @@ if "%1" == "delete" (
 if "%1" == "revert" (
 	call:revert %*
 	exit /b 0
+)
+if "%1" == "open" (
+	call:open %*
+	exit /b 0
 ) else (
 	echo Invalid command
 	call:help
@@ -314,6 +318,46 @@ call:restore %*
 exit /b 0
 ::=========================================================================================
 
+
+:open
+::=========================================================================================
+:: Remove first argument and take the rest
+for /f "usebackq tokens=1*" %%i in (`echo %*`) DO @ set params=%%j
+:: Loop through text file
+for /f "delims=	 eol=# tokens=1,2,3" %%a in (%conf%) do (
+	REM %%a=game name
+	REM %%b=local save
+	REM %%c=backup save
+	if "%%a" == "%params%" (
+		if not exist "%%b" (
+			echo Local save for %%a not found.
+			exit /b 1
+		)
+		echo Local save found, opening...
+		start "%%a" "%%b"
+		rem start "%%b" "%%c"
+		echo Done
+		exit /b 0
+	)
+	REM %%a=arc
+	REM %%b=game name
+	REM %%c=local save
+	REM %%d=backup save
+	if "%%a" == "arc" if "%%b" == "%params%" (
+		if not exist "%%c" (
+			echo Local archive for %%b does not exist.
+			exit /b 1
+		)
+		echo Local archive found, removing...
+		start "%%b" "%%c"
+		rem start "%%b" "%%d"
+		echo Done
+		exit /b 0
+	)
+)
+echo Game not in list.
+exit /b 0
+::=========================================================================================
 
 
 :: Help section
