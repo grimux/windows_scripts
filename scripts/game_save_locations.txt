@@ -140,14 +140,14 @@ Subnautica				S:\games\Subnautica\SNAppData\SavedGames					X:\game-stuff\game-co
 #arc			Citra				C:\Users\user\AppData\Roaming\Citra				X:\game-stuff\emulation\3DS\my_citra.7z
 #arc			Dolphin				S:\Games\Emulation\Dolphin					X:\game-stuff\emulation\Wii-Gamecube\My_Dolphin.7z
 arc			Doom				S:\games\doom							X:\game-stuff\game-collection\Doom Series\Doom + Doom II (1993)\my_doom.7z
-arc			Doom 64				S:\games\doom-64						X:\game-stuff\game-collection\Doom Series\Doom 64\Doom 64 EX\my_doom64.7z
+#arc			Doom 64				S:\games\doom-64						X:\game-stuff\game-collection\Doom Series\Doom 64\Doom 64 EX\my_doom64.7z
 arc			DuckStation			S:\Games\Emulation\duckstation					X:\game-stuff\emulation\Playstation\My_DuckStation.7z
 #arc			Fallout 4			C:\Users\user\AppData\Local\ModOrganizer\Fallout 4		X:\game-stuff\game-collection\Fallout Series\Fallout 4\Saved Games\Mod_Organizer-FO4.7z
 arc			Goldberg			C:\Users\user\AppData\Roaming\Goldberg SteamEmu Saves		X:\game-stuff\steam-emulators\Goldberg\Goldberg Game Saves\Goldberg_SteamEmu_Saves.7z
 #arc			Majoras Mask			C:\games\mm64hd							X:\game-stuff\emulation\N64\mm64hd.7z
 arc			Minecraft			S:\games\minecraft						X:\game-stuff\game-collection\Minecraft\jakecraft.7z
-arc			mupen64				C:\Users\user\AppData\Roaming\Mupen64Plus			X:\game-stuff\emulation\N64\mupen64\my_mupen64.7z
-arc			pcsx2				S:\Games\Emulation\pcsx2					X:\game-stuff\emulation\Playstation 2\My_pcsx2.7z
+#arc			mupen64				C:\Users\user\AppData\Roaming\Mupen64Plus			X:\game-stuff\emulation\N64\mupen64\my_mupen64.7z
+#arc			pcsx2				S:\Games\Emulation\pcsx2					X:\game-stuff\emulation\Playstation 2\My_pcsx2.7z
 #arc			Persona 3			S:\Games\persona-3						X:\game-stuff\game-collection\Persona Series\Persona 3 FES\Saved Games\persona3_saves.7z
 arc			Quake				S:\games\Quake							X:\game-stuff\game-collection\Quake Series\Quake\jake_quake.7z
 arc			rpcs3				S:\Games\Emulation\rpcs3					X:\game-stuff\emulation\Playstation 3\my_rpcs3.7z
