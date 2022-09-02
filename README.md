@@ -24,4 +24,3 @@ WSL
 ----
 TODO: expand
 The WSL scripts rely upon `SystemTrayRefresh.exe` to get rid of non-working icons.  It can be downloaded [here](https://www.majorgeeks.com/files/details/system_tray_refresh.html).  I also added it to the repo.
-
